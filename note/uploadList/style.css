@@ -68,3 +68,14 @@ body {
     font-size: 12px;
     color: gray;
 }
+
+
+/* Additional styling for the starred state */
+.starred {
+    color: gold; /* Replace with the color you desire */
+
+}
+
+.liked {
+    color: #007BFF;
+}

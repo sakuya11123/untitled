@@ -32,16 +32,23 @@
     <!-- Dynamic content will be displayed here -->
   </div>
 
+  <!-- Like section -->
   <div class="icon-container">
     <i class="bi bi-hand-thumbs-up" id="plus-icon"></i>
   </div>
   <div class="count-container" id="like-count">いいね: 0</div>
 
+  <!-- Comment section with star icon -->
+  <div class="icon-container" id="comment-icon-container">
+    <i class="bi bi-star" id="comment-icon"></i>
+  </div>
+<!--  <div class="count-container" id="comment-count">コメント: 0</div>-->
+  <div class="count-container" id="comment-count"></div>
 </div>
 
 <script>
   // Simulate fetching data (replace this with actual data retrieval)
-  var dynamicData = "投稿内容受け取り";
+  var dynamicData = "投稿後内容";
 
   // Get a reference to the element where you want to display the content
   var contentElement = document.getElementById("dynamic-content");
@@ -51,28 +58,49 @@
 </script>
 
 <script>
+  // Like section
   var plusIcon = document.getElementById("plus-icon");
-  var countContainer = document.getElementById("like-count");
-  var count = 0;
-  var isLiked = false; // いいねが付いているかどうかを示すフラグ
+  var likeCountContainer = document.getElementById("like-count");
+  var likeCount = 0;
+  var isLiked = false;
 
-  // アイコンがクリックされたときの処理
   plusIcon.addEventListener("click", function () {
     if (isLiked) {
-      count--;
+      likeCount--;
       plusIcon.classList.remove("liked");
     } else {
-      count++;
+      likeCount++;
       plusIcon.classList.add("liked");
     }
     isLiked = !isLiked;
-    countContainer.textContent = "いいね: " + count;
+    likeCountContainer.textContent = "いいね: " + likeCount;
+  });
+
+  // Comment section
+  var commentIcon = document.getElementById("comment-icon");
+  var commentCountContainer = document.getElementById("comment-count");
+  var commentCount = "";
+
+  commentIcon.addEventListener("click", function () {
+    // Toggle the state of the comment icon
+    commentIcon.classList.toggle("starred");
+
+    // Increment or decrement the comment count based on the state
+    commentCount += commentIcon.classList.contains("starred") ? "" : "";
+    // commentCountContainer.textContent = "コメント: " + commentCount;
+    commentCountContainer.textContent =　commentCount;
   });
 </script>
-<style>
-  .liked {
-    color: #007BFF; /* いいねが付いたときの色（例: 青色） */
-  }
-</style>
+
+<!--<style>-->
+<!--  .liked {-->
+<!--    color: #007BFF;-->
+<!--  }-->
+
+<!--  /* Additional styling for the starred state */-->
+<!--  .starred {-->
+<!--    color: gold; /* Replace with the color you desire */-->
+<!--  }-->
+<!--</style>-->
 </body>
 </html>
