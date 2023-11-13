@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.center-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+}
+
+.center-buttons button {
+    background-color: #0074d9;
+    color: white;
+    /*padding: 10px 20px;*/
+    margin: 0 300px; /* ボタン間の右マージンを追加 */
+    padding: 20px 40px; /* ボタンのパディングを増やしてサイズを調整 */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.center-buttons button a {
+    color: white;
+    text-decoration: none;
+}
+
+.center-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.bi-house-door-fill{
+    font-size: 50px;
+    color: black;
+}

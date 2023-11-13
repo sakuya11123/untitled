@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/note/uploadCompletion/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>Upload Completion</title>
+</head>
+<body>
+<div class="header">
+  <a href="/note/home/noteDisplay.html">
+<!--    <img src="/image/ホームのフリーアイコン素材.jpeg" alt="Home Image">-->
+    <i class="bi bi-house-door-fill"></i>
+  </a>
+</div>
+
+<div class="center-text">
+  <h1 id="upload-status"></h1>
+</div>
+
+<script>
+  // Replace this line with the value you want to insert dynamically
+  var uploadedText = "????";
+
+  // Get a reference to the h1 element by its id
+  var uploadStatusElement = document.getElementById("upload-status");
+
+  // Set the text of the h1 element to the dynamic value
+  uploadStatusElement.textContent = uploadedText;
+</script>
+
+</body>
+</html>

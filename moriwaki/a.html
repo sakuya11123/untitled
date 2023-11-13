@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>画像付きリンクと入力フォーム</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div>
+  <a href="左上のリンクURL" class="left-top">
+    <img src="左上の画像URL" alt="左上の画像">
+  </a>
+  <a href="右上のリンクURL" class="right-top">
+    <img src="右上の画像URL" alt="右上の画像">
+  </a>
+  <div class="centered-form">
+    <div class="personal-id">
+      個人ID: <span id="personal-id-value">~~~~~~</span> <!-- Replace '12345' with your actual value -->
+    </div>
+    <form action="フォーム送信先URL" method="post">
+      <label for="入力フィールド">グループID:~~~~~</label>
+      <div class="input-with-image">
+        <input type="text" id="入力フィールド" name="input_field">
+        <img src="imageURL" alt="Image Description"> <!-- Replace 'imageURL' with your image URL -->
+      </div>
+      <input type="submit" value="送信">
+    </form>
+  </div>
+</div>
+</body>
+</html>

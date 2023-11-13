@@ -1,0 +1,70 @@
+/* 既存のスタイル */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* style.css */
+.bi.bi-arrow-down,
+.bi.bi-arrow-up {
+    font-size: 50px; /* アイコンのサイズを変更 */
+}
+
+.bi-house-door-fill {
+    font-size: 50px; /* bi-person-fillアイコンのサイズを変更 */
+    color: black;
+}
+
+.bi-person-fill {
+    font-size: 50px;
+}
+
+.header, .content {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.header a, .content a {
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.header img, .content img {
+    width: 50px;
+    height: 50px;
+}
+
+/* 新しいスタイルを追加 */
+.content {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.post-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.user-photo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-content p {
+    font-size: 16px;
+}
+
+.post-details {
+    font-size: 12px;
+    color: gray;
+}
