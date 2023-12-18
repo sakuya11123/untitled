@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Notion Upload List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="/NotionUploadList/groupShare/style.css">
+    <script src="inputScript.js"></script>
+</head>
+
+<body>
+<div class="main-container">
+    <!--  投稿内容を受け取るクラス-->
+    <div class="post-container" id="post-container"></div>
+
+    <!--投稿アイコン-->
+    <button id="open-input" onclick="openInputArea()">
+        <i class="bi bi-pencil"></i>
+    </button>
+
+    <!--  投稿画面の背景の仕様-->
+    <div class="overlay" id="overlay"></div>
+    <div class="input-form" id="input-form">
+        <!--投稿フォーム-->
+        <div class="input-formBox">
+            <label for="input-title">タイトル</label>
+            <input type="text" id="input-title" name="input-title"/>
+
+            <label for="input-link">リンク</label>
+            <input type="text" id="input-link" name="input-link"/>
+
+            <div class="input-formButton">
+                <button type="button" onclick="goBack()">戻る</button>
+
+                <button type="button" onclick="inputContentControl()">
+                    <i class="bi bi-send-check"></i> 投稿
+                </button>
+            </div>
+        </div>
+        <!--?ボタン-->
+        <a href="/untitled/note/supportPage/notion_url.html" id="help-link" target="_blank">
+            <i class="bi bi-question-circle" id="help-icon"></i>
+        </a>
+    </div>
+</div>
+</body>
+</html>
